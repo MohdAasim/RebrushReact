@@ -25,10 +25,11 @@
 }
 .res-card{
     padding: 5px;
-    width: 200px;
+    width: 210px;
     height: auto;
     border: 1px solid white;
     margin: 5px;
+    cursor: pointer;
 }
 .search{
     padding:10px;
