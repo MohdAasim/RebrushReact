@@ -10,6 +10,7 @@ const resList = [
         cuisines: ["Bakery", "Ice Cream", "Snacks", "Beverages"],
         avgRating: 4.4,
         veg: true,
+        promoted:true,
         parentId: "40363",
         avgRatingString: "4.4",
         totalRatingsString: "262",

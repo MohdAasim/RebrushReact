@@ -1,5 +1,6 @@
 import { useEffect,useState } from "react";
 import { MENU_API } from "./constants";
+import resList from './mockdata'
 
 const useRestaurantInfo = ()=>{
     const [listofRestaurents, setlistofRestaurents] = useState([]);
@@ -16,7 +17,6 @@ const useRestaurantInfo = ()=>{
         const restaurantCard = json?.data?.cards[1];
         const restaurants =
           restaurantCard?.card?.card?.gridElements?.infoWithStyle?.restaurants;
-          console.log(restaurants);
         if (restaurants) {
           setlistofRestaurents(restaurants);
           setfilteredRestaurant(restaurants);

@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
-import { MENU_API } from "./constants";
+import {RESTAURANT_MENU } from "./constants";
 
-const useRestaurantMenu = () => {
+const useRestaurantMenu = (id) => {
   const [resinfo, setresinfo] = useState(null);
 
   useEffect(() => {
@@ -9,12 +9,12 @@ const useRestaurantMenu = () => {
   }, []);
 
   const fetchMenu = async () => {
-    const data = await fetch(MENU_API);
+    const data = await fetch(RESTAURANT_MENU+id);
     const json = await data.json();
-    const restaurantCard = json?.data?.cards[1];
-    const restaurants =
-      restaurantCard?.card?.card?.gridElements?.infoWithStyle?.restaurants;
-    setresinfo(restaurants[0]);
+    const restaurantCard = json?.data?.cards;
+    // const restaurants =
+    //   restaurantCard?.card
+     setresinfo(restaurantCard);
   };
 
   return resinfo;
